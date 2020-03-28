@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin chuyến đi</title>
+    <script src="https://kit.fontawesome.com/f1bce2ab63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sass/travel.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sass/cart.css">
+</head>
+
+<body>
+    <header>
+        <img src="./images/hotel_desktop.jpg" alt="bg-header">
+
+        <div class="hot-news">
+            <marquee behavior="" direction=""><i class="fab fa-keybase"></i> <a style="text-decoration: none;"
+                    href="#">Cập nhập tình hình dịch bệnh Covid 19 cho tất cả những khách hàng quan tâm đến dịch vụ của
+                    chúng tôi, <span style="color: red;text-decoration: underline;">bấm vào đây để biết thêm thông tin
+                        chi tiết</span> </a></marquee>
+        </div>
+        <div class="select-tour">
+            <!--search-->
+            <div class="select-tour-search lt-12 pdb">
+                <div class="select-tour-search__input">
+                    <i style="color: black; opacity: 0.5; " class="fas fa-search"></i>
+                    <input style="flex-grow:1" type="text " placeholder="Tìm kiếm chuyến đi bạn muốn">
+                </div>
+            </div>
+
+            <!--calendar-->
+            <div class="calendar lt-12 pdb">
+                <div class="calendar-wrap">
+                    <i class="far fa-calendar-alt"></i>
+                    <div class="calendar-wrap-time">Tháng 3/2020</div>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <div class="calendar-wrap-time">Tháng 3/2020</div>
+                </div>
+            </div>
+
+            <!--place-->
+
+            <div class="place lt-12 pdb">
+                <div class="place-wrap">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select name="" id="">
+                        <option value="">Phong Nha Kẻ Bàng</option>
+                        <option value="">Vịnh Hạ Long</option>
+                        <option value="">Tam Cốc Bích Động</option>
+                        <option value="">Tây Ban Nha</option>
+                        <option value="">Phong Nha Kẻ Bàng</option>
+                        <option value="">Phong Nha Kẻ Bàng</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--button find travel-->
+            <div class="select-tour-button lt-12 pdb">
+                <div class="select-tour-button__text">Tìm kiếm</div>
+            </div>
+        </div>
+    </header>
+    <div class="navigation">
+        <div class="nav">
+            <!--logo-->
+            <div class="nav__logowrap">
+                <a href=""><img src="./images/logo.png" alt="logo"></a>
+            </div>
+            <div onclick="openNav()" class="nav__tablet">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav__menu">
+                <li class="nav__menu-item"><a href="index.html">Trang chủ</a></li>
+                <li class="nav__menu-item"><a href="#">Giới thiệu </a></li>
+                <li class="nav__menu-item">
+                    <a href="tourdulich.html"> Tour du lịch</a>
+                    <div class="submenu-wrap">
+                        <!-- 1 column submenu-->
+                        <div class="submenu-wrap-column">
+                            <h1>Trong nước</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Hạ Long</a>
+                                <a href="#">Ninh Bình</a>
+                                <a href="#">Nghệ An</a>
+                                <a href="#">Đà Nẵng</a>
+                                <a href="#">Tam đảo</a>
+                                <a href="#">Quảng Ninh </a>
+                                <a href="#">Thanh Hóa</a>
+                            </div>
+                        </div>
+
+                        <div class="submenu-wrap-column">
+                            <h1>Ngoài Nước</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Tây Ban Nha</a>
+                                <a href="#">Ý</a>
+                                <a href="#">Pháp</a>
+                                <a href="#">Anh</a>
+                                <a href="#">Thái Lan</a>
+                                <a href="#">Hàn Quốc</a>
+                                <a href="#">Trung Quốc</a>
+                            </div>
+                        </div>
+
+                        <div class="submenu-wrap-column">
+                            <h1>Yêu thích</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Sapa</a>
+                                <a href="#">Vịnh Hạ Long</a>
+                                <a href="#">Đà Nẵng</a>
+                            </div>
+                        </div>
+
+                        <div class="submenu-wrap-column">
+                            <h1>Tự chọn</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Hang Sơn Đòng</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav__menu-item"><a href="tintuc.html">Tin tức</a></li>
+                <li class="nav__menu-item"><a href="#">Liên hệ</a></li>
+            </div>
+            <div class="nav__btnwrap">
+                <span title="Bạn có thể lựa chọn ngôn ngữ tại đây">Ngôn ngữ</span>
+                <!-- <select name="" id="">
+                    <option value="">Tiếng Việt</option>
+                    <option value="">English</option>
+                </select> -->
+                <a title="Thông tin tài khoản của bạn" id="myAccount" href="#"> <i class="fas fa-user-tie"></i> Tài
+                    khoản </a>
+                <div id="wrapMyAccount" class="myaccount  ">
+                    <a href="#"> <i style="margin-right: 10px;" class="fas fa-sign-in-alt"></i>Đăng nhập</a>
+                    <a href="#"><i style="margin-right: 10px;" class="fas fa-sign-out-alt"></i>Đăng ký</a>
+                    <a href="#"><i style="margin-right: 10px;" class="fas fa-bus"></i>Chuyến đi của bạn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mySidebar" class="nav__tablet-wrap">
+        <div class="nav__tablet-wrap-account">
+            <div onclick="closeNav()" class="closeNav" title="Bấm vào để đóng">x</div>
+            <div class="nav__tablet-wrap-account__icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div id="clickme" class="nav__tablet-wrap-account__info">Tài khoản <i class="fas fa-caret-down"></i></div>
+        </div>
+        <div class="nav__tablet-wrap-login" id="mobile-wrapLogin">
+            <a href="#"> <i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+            <a href="#"> <i class="fas fa-sign-out-alt"></i>Đăng ký</a>
+            <a href="#"> <i class="fas fa-plane"></i>Chuyến đi của bạn</a>
+            <a href="#"> <i class="fas fa-times-circle"></i>Thoát</a>
+        </div>
+        <div class="nav__tablet-wrap-menu">
+            <a href="#"> <i class="fas fa-home"></i>Trang chủ</a>
+            <a href="#"> <i class="fas fa-info-circle"></i>Giới thiệu</a>
+            <a href="#"> <i class="fas fa-bus"></i> Tour du lịch</a>
+            <a href="#"><i class="far fa-newspaper"></i>Tin tức</a>
+            <a href="#"><i class="fas fa-bullhorn"></i>Liên hệ</a>
+        </div>
+        <div class="nav__tablet-wrap-language">
+            <a href="#">Tiền tệ</a>
+            <a href="#">Ngôn ngữ
+                <select name="" id="">
+                    <option value="">Tiếng việt</option>
+                    <option value="">English</option>
+                    <option value="">Tiếng Nga</option>
+                    <option value="">Trung quốc</option>
+                    <option value="">Pháp</option>
+                </select>
+            </a>
+            <a href="#">Hỗ trợ <span><i class="fas fa-phone-volume"></i> 0398473263</span></a>
+            <a href="#">Tải ứng dụng</a>
+        </div>
+    </div>
+
+
+    <!-- <div class="col-xs-12 a-center">
+        <ul class="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">					
+            <li class="home">
+                <a itemprop="url" href="/"><span itemprop="title">Trang chủ</span></a>	
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </li>
+            
+            
+            <li>
+                <a itemprop="url" href="/san-pham-moi"><span itemprop="title">Sản phẩm mới</span></a>						
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+            </li>
+            
+            <li><strong><span itemprop="title">Miền Tây - Đồng Tháp - Tràm Chim - Thiền Viện Trúc Lâm Chánh Giác</span></strong></li><li>
+            
+        </li></ul>
+    </div> -->
+    <!-- thông tin chuyến đi trong giỏ hàng -->
+
+    <div class="title">
+        <div class="title-wrap"><i class="fas fa-newspaper"></i>Thông tin tour du lịch</div>
+    </div>
+    <div class="cart">
+        <div class="cart-wrap">
+            <div class="cart-wrap-contain">
+                <!-- tiêu đề-->
+                <div class="cart-wrap-contain__title">
+                    <h1>Miền Tây - Đồng Tháp - Tràm Chim - Thiền Viện Trúc Lâm Chánh Giác</h1>
+                </div>
+                <!--chi tiết thoogn tin giá cả lung tung là bêng-->
+                <div class="cart-wrap-contain-main">
+                    <div class="cart-wrap-contain-main__img">
+                        <div class="cart-wrap-contain-main__img-bigpicture">
+                            <img src="./images/thienvientruclam.jpg" alt="Thiền viện trúc lâm">
+                        </div>
+                        <div class="cart-wrap-contain-main__img-smallpicture">
+                            <div>
+                                <img src="./images/anhcon1.jpg" alt="Thiền viện trúc lâm 1"
+                                    title="HÌnh ảnh về thiền viện trúc lâm">
+                                <img src="./images/anhcon2.jpg" alt="Thiền viện trúc lâm 2"
+                                    title="HÌnh ảnh về thiền viện trúc lâm">
+                                <img src="./images/anhcon3.jpg" alt="Thiền viện trúc lâm 3"
+                                    title="HÌnh ảnh về thiền viện trúc lâm">
+                                <img src="./images/anhcon4.jpg" alt="Thiền viện trúc lâm 4"
+                                    title="HÌnh ảnh về thiền viện trúc lâm">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-wrap-contain-main__info">
+                        <div style="margin-bottom: 10px;"><span><i class="fas fa-bus"></i> Di chuyển bằng :</span> Di chuyển bằng oto</div>
+                        <div style="margin-bottom: 10px;"><span><i class="fas fa-paper-plane"></i> Ngày khởi hành :</span> Thứ 2 hàng tuần</div>
+                        <div style="margin-bottom: 10px;"><span><i class="far fa-clock"></i> Thời gian :</span> 5 ngày 4 đêm</div>
+                        <p>- Tìm hiểu đời sống của dân tộc thiểu số tại bản Lao Chải - Tả Van</p>
+                        <p>- Viếng chùa Bái Đính - ngôi chùa của những kỷ lục</p>
+                        <p>- Tham quan KDL Tràng An - với hệ thống sông, suối, các hang xuyên thủy động và các dãy núi
+                            đá vôi...</p>
+                        <div class="cart-wrap-contain-main__info-price">
+                            <div class="w-100">
+                                <div class="w-25">Loại khách</div>
+                                <div class="w-25">Số lượng</div>
+                                <div class="w-25">Đơn giá</div>
+                                <div class="w-25">Tổng giá</div>
+                            </div>
+                            <div class="w-100">
+                                <div class="w-25">Người lớn</div>
+                                <div class="w-25">
+                                    <input type="text" placeholder="0">
+                                </div>
+                                <div class="w-25">6.400.000 đ</div>
+                                <div class="w-25 cl">0đ</div>
+                            </div>
+
+                            <div class="w-100">
+                                <div class="w-25">Trẻ em</div>
+                                <div class="w-25">
+                                    <input type="text" placeholder="0">
+                                </div>
+                                <div class="w-25">3.400.000 đ</div>
+                                <div class="w-25 cl">0đ</div>
+                            </div>
+
+                            <div class="w-100">
+                                <div class="w-25">Em bé</div>
+                                <div class="w-25">
+                                    <input type="text" placeholder="0">
+                                </div>
+                                <div class="w-25">1.400.000 đ</div>
+                                <div class="w-25 cl">0đ</div>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <span>Tổng tiền</span>
+                            <p>10,000,000đ</p>
+                        </div>
+                        <div class="pay-btn">
+                            <div class="pay-btn__time">
+                                <div> <i class="fas fa-calendar-alt"></i>Chọn ngày đi</div>
+                            </div>
+                            <div class="pay-btn__picked">
+                                <div> <i class="fas fa-paper-plane"></i>ĐẶT TOUR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- thông tin chuyến đi trong giỏ hàng -->
+    
+    <!-- Nội dung thông tin lịch tình bla bla , block bên dưới-->
+    <div class="travel-info">
+        <div class="travel-info-title">
+            <h1>CHƯƠNG TRÌNH TOUR</h1>
+        </div>
+        <div class="travel-info-wrap">
+            <div class="rte">
+
+                <p style=" font-weight:600; font-size: 18px;">Lộ trình:<br>
+
+                    <p>TP.HCM - Tràm Chim Tam Nông (150km) - Thiền Viện Trúc Lâm Chánh Giác (78 km) - Cơ sở sản xuất kẹo
+                        khóm Tân Phước (18 km) - TP.HCM (81 km).&nbsp;<br>
+                        &nbsp;<br>
+                        Lưu ý: đây là chương trình du lịch trọn gói, Vietravel không có trách nhiệm hoàn trả chi phí
+                        chênh
+                        lệch cho các khách hàng thuộc diện miễn giảm hoặc đối tượng ưu tiên như trẻ nhỏ, người lớn tuổi,
+                        người có công với cách mạng… Chính sách miễn giảm, ưu tiên (nếu có) chỉ dành cho khách lẻ của
+                        các
+                        điểm tham quan.<br>
+                        &nbsp;<br>
+                        Giá tour bao gồm:&nbsp;<br>
+                        • Xe tham quan (15, 25, 35, 45 chỗ tùy theo số lượng khách)&nbsp;<br>
+                        • Hướng dẫn viên tiếng Việt.<br>
+                        • Ăn theo chương trình: 01 bữa trưa&nbsp;<br>
+                        • Vé tham quan theo chương trình.<br>
+                        • Bảo hiểm du lịch với mức bồi thường cao nhất 120.000.000đ/vụ.&nbsp;<br>
+                        • Nước suối: 01 chai 0,5L/ ngày/ khách.<br>
+                        • Nón Vietravel.<br>
+                        • Thuế VAT<br>
+                        &nbsp;<br>
+                        Giá tour không bao gồm:<br>
+                            • Chi phí cá nhân: ăn uống ngoài chương trình, giặt ủi, phụ thu phòng đơn….<br>
+                            • Chi phí tham quan ngoài chương trình.<br>
+                            &nbsp;<br>
+                            Giá vé cho trẻ em:<br>
+                            • Trẻ em dưới 5 tuổi: không thu phí dịch vụ, bố mẹ tự lo cho bé và thanh toán các chi phí
+                            phát sinh
+                            (đối với các dịch vụ tính phí theo chiều cao…). Hai người lớn chỉ được kèm 1 trẻ em dưới 5
+                            tuổi, trẻ
+                            em thứ 2 sẽ đóng phí theo qui định dành cho độ tuổi từ 5 tuổi trở lên.<br>
+                            • Trẻ em 5 tuổi trở lên: phải mua vé tour trọn gói như người lớn bao gồm phương tiện vận
+                            chuyển, ăn
+                            uống theo chương trình, vé tham quan theo qui định các điểm tham quan.<br>
+                            • Lưu ý: trong trường hợp Quý khách có nhu cầu tự mua vé tham quan, chúng tôi sẵn sàng tư
+                            vấn để Quý
+                            khách chọn mua tour F&amp;E hoặc tour theo nhóm riêng, theo dạng tour này Quý khách có thể
+                            tự chọn
+                            các dịch vụ theo nhu cầu.<br>
+                            &nbsp;
+                        <span id="dots"></span><span id="more"><img data-thumb="original" original-height="600" original-width="1200"
+                                src="//bizweb.dktcdn.net/100/299/077/products/jed1367636408.jpg?v=1529554705153"><br>
+                            Điều kiện thanh toán:&nbsp;<br>
+                            • Khi đăng ký yêu cầu thanh toán 100% số tiền tour.<br>
+                            &nbsp;<br>
+                            Các điều kiện khi đăng ký tour:&nbsp;<br>
+                            • Đối với Khách Quốc tịch Việt Nam: Khi đi tour Trẻ em từ 14 tuổi trở lên và người lớn cần
+                            đem theo
+                            CMND/Passport (Hộ chiếu) bản chính còn hạn sử dụng, hình ảnh rõ (CMND có thời hạn sử dụng
+                            không quá
+                            15 năm, tính từ ngày cấp)/ Giấy khai sinh bản chính (trẻ em dưới 14 tuổi).<br>
+                            • Đối với khách Nước ngoài/Việt Kiều: Khi đi tour phải mang theo đầy đủ Passport (Hộ Chiếu)
+                            bản
+                            chính còn hạn sử dụng hoặc thẻ xanh kèm theo Visa và giấy tái xuất nhập Việt Nam.<br>
+                            • Khi đăng ký tour Quý khách vui lòng mang theo CMND/Passport bản chính hoặc cung cấp tên
+                            chính xác
+                            đầy đủ, đúng từng ký tự trên CMND/ Passport (Hộ chiếu)/Giấy khai sinh (trẻ em dưới 14 tuổi)
+                            theo thứ
+                            tự: Họ/tên lót/tên.&nbsp;<br>
+                            • Chương trình và điểm tham quan có thể linh động thay đổi thứ tự các điểm phù hợp điều kiện
+                            thực
+                            tế. Vietravel sẽ không chịu trách nhiệm bảo đảm các điểm tham quan trong trường hợp:<br>
+                            +Xảy ra thiên tai: bão lụt, hạn hán, động đất…<br>
+                            + Sự cố về an ninh: khủng bố, biểu tình…<br>
+                            + Sự cố về giao thông: kẹt xe,...<br>
+                            • Nếu những trường hợp trên xảy ra, Vietravel sẽ xem xét để hoàn trả chi phí không tham quan
+                            cho
+                            khách trong điều kiện có thể (sau khi đã trừ lại các dịch vụ đã thực hiện….và không chịu
+                            trách nhiệm
+                            bồi thường thêm bất kỳ chi phí nào khác).<br>
+                            • Thông tin tập trung : Tại Vietravel – 190 Pasteur, Phường 6, Quận 3, TPHCM trước giờ khởi
+                            hành
+                            15-30 phút. Quý khách đến trễ khi xe đã khởi hành hoặc hủy tour không báo trước vui lòng
+                            chịu phí
+                            như hủy vé ngay ngày khởi hành.<br>
+                            • Quý khách dưới 18 tuổi khi đi tour phải có Bố Mẹ hoặc người thân trên 18 tuổi đi cùng.
+                            Trường hợp
+                            đi một mình phải được Bố Mẹ ủy quyền (có xác nhận của chính quyền địa phương) cho
+                            Vietravel&nbsp;<br>
+                            • Khách nữ từ 55 tuổi trở lên và khách nam từ 60 trở lên: nên có người thân dưới 55 tuổi
+                            (đầy đủ sức
+                            khỏe) đi cùng. Riêng khách từ 70 tuổi trở lên: Bắt buộc phải có người thân dưới 55 tuổi (đầy
+                            đủ sức
+                            khỏe) đi cùng và nộp kèm giấy khám sức khỏe, có xác nhận đủ sức khỏe để đi du lịch của bác
+                            sĩ + Giấy
+                            cam kết sức khỏe theo mẫu qui định của công ty. Vì lý do an toàn Quý khách hạn chế và không
+                            nhận
+                            khách từ 80 tuổi trở lên. Khách trên 80 tuổi không có chế độ bảo hiểm.<br>
+                            • Quý khách đang mang thai vui lòng báo cho nhân viên bán tour ngay tại thời điểm đăng ký.
+                            Lưu ý
+                            phải có ý kiến của bác sĩ trước khi đi tour. Cam kết tự chịu trách nhiệm về sức khỏe của
+                            mình và
+                            thai nhi trong suốt thời gian tham gia chương trình du lịch.&nbsp;<br>
+                            • Quý khách có nhu cầu cần xuất hóa đơn vui lòng cung cấp thông tin xuất hóa đơn cho nhân
+                            viên bán
+                            tour &nbsp;ngay khi đăng ký, không nhận xuất hóa đơn sau khi tour đã kết thúc.&nbsp;<br>
+                            • Quý khách vui lòng tham khảo kỹ các Điều Kiện Bán Vé trước khi đăng ký chuyến du lịch.
+                            Trong
+                            trường hợp không trực tiếp đăng ký, nhờ người thân đăng ký hộ vui lòng cập nhật thông tin từ
+                            người
+                            đăng ký.&nbsp;<br>
+                            &nbsp;<br>
+                            Lưu ý khi chuyển/huỷ tour:<br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; Tour không hoàn, không hủy, không đổi. Trường hợp hoàn, hủy, đổi
+                            tour
+                            mất 100% trên giá tour</p></span>
+                </p>
+                <p>&nbsp;</p>
+
+
+                <a onclick="myFunction()" id="myBtn">Xem chi tiết tại đây</a>
+            </div>
+            <div class="noibat">
+                <div class="noibat__title">
+                    <h1>Thông tin cơ bản</h1>
+                </div>
+                <div class="noibat-content">
+                    <div class="noibat-content__row">
+                        <span>Mã tour </span>
+                        <p>1557</p>
+                    </div>
+
+                    <div class="noibat-content__row">
+                        <span>Thời gian </span>
+                        <p>5 ngày 4 đêm</p>
+                    </div>
+
+                    <div class="noibat-content__row">
+                        <span>Khởi hành </span>
+                        <p>26/3/2020</p>
+                    </div>
+
+                    <div class="noibat-content__row">
+                        <span>Vận chuyển </span>
+                        <p>Xe oto, máy bay</p>
+                    </div>
+                    <div class="noibat-content__row">
+                        <span>Xuất phát </span>
+                        <p>Từ Hồ Chí Minh</p>
+                    </div>
+                </div>
+                <div class="noibat__title mgt">
+                    <h1>Giá chỉ từ 6,499,00đ</h1>
+                </div>
+                <div  class="hight"><i class="fas fa-map-marked mgr"></i> Điểm nhấn hành trình
+                </div>
+                <div class="hight"><i class="fas fa-map-marked mgr"></i> Lịch trình</div>
+                <div class="hight"><i class="fas fa-map-marked mgr"></i> Dịch vụ bao gồm </div>
+                <div class="hight"><i class="fas fa-map-marked mgr"></i> Ghi chú</div>
+                <div class="hight"><i class="fas fa-map-marked mgr"></i> Ngày khởi hành khác</div>
+                <div class="button-need bg-xanh">Tư vấn thêm</div>
+                <div class="button-need bg-red">Đặt chuyến </div>
+            </div>
+        </div>
+    </div>
+    <div class="rating">
+            <span class="heading">Đánh giá của người dùng</span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <p>4.1 trên tổng 254 reviews.</p>
+            <hr style="border:3px solid #f1f1f1">
+            
+            <div class="row1">
+              <div class="side">
+                <div>5 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-5"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>150</div>
+              </div>
+              <div class="side">
+                <div>4 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-4"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>63</div>
+              </div>
+              <div class="side">
+                <div>3 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-3"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>15</div>
+              </div>
+              <div class="side">
+                <div>2 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-2"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>6</div>
+              </div>
+              <div class="side">
+                <div>1 star</div>
+              </div>
+              <div class="middle">
+                <div class="bar-container">
+                  <div class="bar-1"></div>
+                </div>
+              </div>
+              <div class="side right">
+                <div>20</div>
+              </div>
+            </div>
+            <div class="fb-comments" data-href="http://127.0.0.1:5500/index.html" data-width="500" data-numposts="5"></div>
+            <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+    </div>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <div class="tourin">
+        <div class="tourin-wrap">
+            <div class="tourin-wrap-title">
+                <h1> các Tour liên quan</h1>
+                <p>Sale off tất cả các tour trong tháng này. Nhanh tay đặt tour để cho gia đình mình cùng quây quần bên nhau</p>
+            </div>
+            <div class="tourin-wrap-contain">
+                <!-- 1 row-->
+                <div class="tourin-wrap-contain-row">
+                    <!-- 1 tour item-->
+                    <!-- <div class="tourin-wrap-contain-row-item">
+                        <div class="tourin-anh">
+                            <img src="./images/sapa.jpg" alt="Động phong nha">
+                            <div class="tourin-anh-from">
+                                <a>Từ Hà Nội</a>
+                            </div>
+                            <div class="tourin-anh-overlay">
+                                <p>Xem chi tiết</p>
+                            </div>
+                        </div>
+                        <div class="tourin-text">Tour Miền Trung : Đà Nẵng -  Bà Nà  - Hội An</div>
+                        <div class="tourin-info">
+                            <div class="tourin-info__text">
+                               <p>  <i class="far fa-clock"></i>Lịch trình : 5 ngày 4 đêm</p>
+                                <p> <i class="far fa-calendar-alt"></i> Khởi hành : 29/03/2020</p>
+                                <p> <i class="far fa-user"></i> Số chỗ còn nhận : <span style="color: red;">16/20</span></p>
+                            </div>
+                            <div class="tourin-info__price">
+                                <i class="fas fa-dollar-sign"></i> <span style="text-decoration: line-through; color: rgba(0, 0, 0, 0.5);margin-right: 10px;">5,799,000đ</span> <span >5,000,009đ</span>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <div class="tourin-info__btn">
+                                <a href="#">Đặt ngay</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--end 1 tour item-->
+
+                    <!-- 1 tour item-->
+                    <!-- <div class="tourin-wrap-contain-row-item">
+                        <div class="tourin-anh">
+                            <img src="./images/du-lich-thai-lan-dolphin-show-du-lich-viet.jpg" alt="Động phong nha">
+                            <div class="tourin-anh-from">
+                                <a>Từ Hà Nội</a>
+                            </div>
+                            <div class="tourin-anh-overlay">
+                                <p>Xem chi tiết</p>
+                            </div>
+                        </div>
+                        <div class="tourin-text">Tour Miền Trung : Đà Nẵng -  Bà Nà  - Hội An</div>
+                        <div class="tourin-info">
+                            <div class="tourin-info__text">
+                               <p>  <i class="far fa-clock"></i>Lịch trình : 5 ngày 4 đêm</p>
+                                <p> <i class="far fa-calendar-alt"></i> Khởi hành : 29/03/2020</p>
+                                <p> <i class="far fa-user"></i> Số chỗ còn nhận : <span style="color: red;">16/20</span></p>
+                            </div>
+                            <div class="tourin-info__price">
+                                <i class="fas fa-dollar-sign"></i> <span style="text-decoration: line-through; color: rgba(0, 0, 0, 0.5);margin-right: 10px;">5,799,000đ</span> <span >5,000,009đ</span>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <div class="tourin-info__btn">
+                                <a href="#">Đặt ngay</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--end 1 tour item-->
+
+                    <!-- 1 tour item-->
+                    <!-- <div class="tourin-wrap-contain-row-item">
+                        <div class="tourin-anh">
+                            <img src="./images/Fansipan.jpg" alt="Động phong nha">
+                            <div class="tourin-anh-from">
+                                <a>Từ Hà Nội</a>
+                            </div>
+                            <div class="tourin-anh-overlay">
+                                <p>Xem chi tiết</p>
+                            </div>
+                        </div>
+                        <div class="tourin-text">Tour Miền Trung : Đà Nẵng -  Bà Nà  - Hội An</div>
+                        <div class="tourin-info">
+                            <div class="tourin-info__text">
+                               <p>  <i class="far fa-clock"></i>Lịch trình : 5 ngày 4 đêm</p>
+                                <p> <i class="far fa-calendar-alt"></i> Khởi hành : 29/03/2020</p>
+                                <p> <i class="far fa-user"></i> Số chỗ còn nhận : <span style="color: red;">16/20</span></p>
+                            </div>
+                            <div class="tourin-info__price">
+                                <i class="fas fa-dollar-sign"></i> <span style="text-decoration: line-through; color: rgba(0, 0, 0, 0.5);margin-right: 10px;">5,799,000đ</span> <span >5,000,009đ</span>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <div class="tourin-info__btn">
+                                <a href="#">Đặt ngay</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!--end 1 tour item-->
+
+                    <!-- 1 tour item-->
+                    <div class="tourin-wrap-contain-row-item">
+                        <div class="tourin-anh">
+                            <img src="./images/nhatban.jpg" alt="Động phong nha">
+                            <div class="tourin-anh-from">
+                                <a>Từ Hà Nội</a>
+                            </div>
+                            <div class="tourin-anh-overlay">
+                                <p>Xem chi tiết</p>
+                            </div>
+                        </div>
+                        <div class="tourin-text">Tour Miền Trung : Đà Nẵng -  Bà Nà  - Hội An</div>
+                        <div class="tourin-info">
+                            <div class="tourin-info__text">
+                               <p>  <i class="far fa-clock"></i>Lịch trình : 5 ngày 4 đêm</p>
+                                <p> <i class="far fa-calendar-alt"></i> Khởi hành : 29/03/2020</p>
+                                <p> <i class="far fa-user"></i> Số chỗ còn nhận : <span style="color: red;">16/20</span></p>
+                            </div>
+                            <div class="tourin-info__price">
+                                <i class="fas fa-dollar-sign"></i> <span style="text-decoration: line-through; color: rgba(0, 0, 0, 0.5);margin-right: 10px;">5,799,000đ</span> <span >5,000,009đ</span>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked</span>
+                            <span class="fa fa-star"></span>
+                            <div class="tourin-info__btn">
+                                <a href="#">Đặt ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end 1 tour item-->
+
+                    <!-- 1 tour item-->
+                    <div class="tourin-wrap-contain-row-item">
+                        <div class="tourin-anh">
+                            <img src="./images/le-hoi-anh-sang-vivid-sydney.jpg" alt="Động phong nha">
+                            <div class="tourin-anh-from">
+                                <a>Từ Hà Nội</a>
+                            </div>
+                            <div class="tourin-anh-overlay">
+                                <p>Xem chi tiết</p>
+                            </div>
+                        </div>
+                        <div class="tourin-text">Tour Miền Trung : Đà Nẵng -  Bà Nà  - Hội An</div>
+                        <div class="tourin-info">
+                            <div class="tourin-info__text">
+                               <p>  <i class="far fa-clock"></i>Lịch trình : 5 ngày 4 đêm</p>
+                                <p> <i class="far fa-calendar-alt"></i> Khởi hành : 29/03/2020</p>
+                                <p> <i class="far fa-user"></i> Số chỗ còn nhận : <span style="color: red;">16/20</span></p>
+                            </div>
+                            <div class="tourin-info__price">
+                                <i class="fas fa-dollar-sign"></i> <span style="text-decoration: line-through; color: rgba(0, 0, 0, 0.5);margin-right: 10px;">5,799,000đ</span> <span >5,000,009đ</span>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <div class="tourin-info__btn">
+                                <a href="#">Đặt ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end 1 tour item-->
+
+                    <!-- 1 tour item-->
+                    <div class="tourin-wrap-contain-row-item">
+                        <div class="tourin-anh">
+                            <img src="./images/du-lich-phuc-quoc-ngam-Hoang-hon-Phu-Quoc-du-lich-viet.jpg" alt="Động phong nha">
+                            <div class="tourin-anh-from">
+                                <a>Từ Hà Nội</a>
+                            </div>
+                            <div class="tourin-anh-overlay">
+                                <p>Xem chi tiết</p>
+                            </div>
+                        </div>
+                        <div class="tourin-text">Tour Miền Trung : Đà Nẵng -  Bà Nà  - Hội An</div>
+                        <div class="tourin-info">
+                            <div class="tourin-info__text">
+                               <p>  <i class="far fa-clock"></i>Lịch trình : 5 ngày 4 đêm</p>
+                                <p> <i class="far fa-calendar-alt"></i> Khởi hành : 29/03/2020</p>
+                                <p> <i class="far fa-user"></i> Số chỗ còn nhận : <span style="color: red;">16/20</span></p>
+                            </div>
+                            <div class="tourin-info__price">
+                                <i class="fas fa-dollar-sign"></i> <span style="text-decoration: line-through; color: rgba(0, 0, 0, 0.5);margin-right: 10px;">5,799,000đ</span> <span >5,000,009đ</span>
+                            </div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <div class="tourin-info__btn">
+                                <a href="#">Đặt ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end 1 tour item-->
+                </div>
+            </div> 
+            <div class="readmore"><a href="">Xem thêm <i class="fas fa-long-arrow-alt-right"></i>  </a></div>
+        </div>
+    </div>
+
+    <!-- <div class="tour-lienquan">
+    </div> -->
+    <!-- Liên hệ -->
+    
+    <div class="submit-form">
+        <h1>Đăng ký nhận tin</h1>
+        <span>Tổng hợp những chương trình tour theo tháng, du lịch vòng quanh thế giới với mức chi phí cực rẻ. Để nhận
+            ngay những thông tin chương trình tour hot, Sale. Quý khách hàng vui lòng nhập thông tin email tại đây !
+            Thanks</span>
+        <img src="./images/bg_brand.png" alt="">
+        <div class="submit-form-overlay"></div>
+        <div class="submit-form-search">
+            <form action="action.php">
+                <input type="text" placeholder=" Email của bạn  " required
+                    title="Vui lòng để lại email của bạn tại đây">
+                <button title="Bấm vào để đăng ký nhận thông tin">Đăng ký <i
+                        class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
+        </div>
+    </div>
+    <!-- Liên hệ -->
+
+    <!-- main-contact-->
+    <div class="contact">
+
+        <div class="contact-row">
+            <!-- Column  thứ 1-->
+            <div class="contact-row-column">
+                <!--liên hệ-->
+                <div class="contact-row-lienhe">
+                    <div class="lienhe-wrap">
+                        <h1>LIÊN LẠC</h1>
+                        <div class="lienhe-wrap-item"><i class="fas fa-house-damage"></i><a href="#"> Phòng 2006 Tầng
+                                20</a></div>
+                        <div class="lienhe-wrap-item"><i class="fas fa-phone-volume"></i><a href="#"> 0398473263</a>
+                        </div>
+                        <div class="lienhe-wrap-item"><i class="far fa-envelope"></i><a
+                                href="#">Sonlhepuit@gmail.com</a></div>
+                        <div class="lienhe-wrap-item"><i class="far fa-clock"></i><a href="#">8h30am - 6hpm</a></div>
+                        <div class="lienhe-wrap-item"><i class="far fa-envelope"></i><a
+                                href="#">Sonlhepuit@gmail.com</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-row-ketnoi">
+                    <!-- khối icon bên trên-->
+                    <div class="contact-row-ketnoi-row ">
+                        <h1>KẾT NỐI VỚI CHÚNG TÔI</h1>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-skype"></i></a></div>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-skype"></i></a></div>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-skype"></i></a></div>
+
+                    </div>
+                    <div class="contact-row-ketnoi-row">
+                        <h1>CHẤP NHẬN THANH TOÁN</h1>
+                        <li>
+                            <a href=""><img src="./images/img_payment_1.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_2.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_3.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_4.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/img_payment_5.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_6.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_7.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_8.png" alt=""></a>
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+            <!--Column thứ 2-->
+
+            <div class="contact-row-column">
+                <div class="contact-row-column-list">
+                    <!--column thứ nhất trong column to trong row lớn :)))-->
+                    <div class="contact-row-column-list-column">
+
+                        <div class="contact-row-column-list-column__title">TRONG NƯỚC</div>
+                        <div class="contact-row-column-list-column__item">
+                            <div><a href=""> - Hạ Long</a></div>
+                            <div><a href=""> - Ninh Bình</a></div>
+                            <div><a href=""> - Nghệ An</a></div>
+                            <div><a href=""> - Đà Nẵng</a></div>
+                            <div><a href=""> - Tam Đảo</a></div>
+                            <div><a href=""> - Quảng Ninh</a></div>
+                            <div><a href=""> - Thanh Hóa</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-row-column-list-column">
+
+                        <div class="contact-row-column-list-column__title">NGOÀI NƯỚC</div>
+                        <div class="contact-row-column-list-column__item">
+                            <div><a href=""> - Tây Ban Nha</a></div>
+                            <div><a href=""> - Ý</a></div>
+                            <div><a href=""> - Pháp</a></div>
+                            <div><a href=""> - Anh</a></div>
+                            <div><a href=""> - Thái Lan</a></div>
+                            <div><a href=""> - Hàn Quốc</a></div>
+                            <div><a href=""> - Trung Quốc</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-row-column-list-column">
+
+                        <div class="contact-row-column-list-column__title">THÔNG TIN</div>
+                        <div class="contact-row-column-list-column__item">
+                            <div><a href=""> - Tin tức du lịch </a></div>
+                            <div><a href=""> - Tạp chí du lịch</a></div>
+                            <div><a href=""> - Cẩm nang du lịch </a></div>
+                            <div><a href=""> - Kinh nghiệm du lịch</a></div>
+                            <div><a href=""> - Kinh nghiệm xin Visa</a></div>
+                            <div><a href=""> - Điều bạn cần biết</a></div>
+                            <div><a href=""> - Liên hệ</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="copyright-wrap">
+            <span>© Bản quyền thuộc về I&E Corp ,</span>
+            <span>Cung cấp bởi <a href="" title="call me is Bap Cai Dep Trai ">Bắp Cải</a> </span>
+        </div>
+    </footer>
+
+    <!-- icon fixed contact start-->
+    <div class="wrap-contact">
+        <div class="wrap-contact-row" onclick="openContact1()">
+            <div title=" Số điện thoại của chúng tôi" style="background-color: green;" id="open-contact"
+                class="wrap-contact-row__icon"><i class="fas fa-phone"></i></div>
+            <div id="changeText1" class="wrap-contact-row__text">+84 : 98473263</div>
+        </div>
+        <div title="Kênh youtube của chúng tôi" class="wrap-contact-row" onclick="openContact2()">
+            <div style="background-color:red;" class="wrap-contact-row__icon"><i class="fab fa-youtube"></i></div>
+            <div id="changeText2" class="wrap-contact-row__text">Youtube : ĐẠI HỌC VĂN HÓA HÀ NỘI</div>
+        </div>
+        <div title="Facebook của chúng tôi" class="wrap-contact-row" onclick="openContact3()">
+            <div style="background-color: royalblue;" class="wrap-contact-row__icon"><i class="fab fa-facebook"></i>
+            </div>
+            <div id="changeText3" class="wrap-contact-row__text">ĐẠI HỌC VĂN HÓA HÀ NỘI</div>
+        </div>
+        <div title="Nhắn tin cho chúng tôi" class="wrap-contact-row" onclick="openContact4()">
+            <div style="background-color: orange;" class="wrap-contact-row__icon"><i
+                    class="fab fa-facebook-messenger"></i>
+            </div>
+            <div id="changeText4" class="wrap-contact-row__text">FB:MESSAGE//DAIHOCVANHOAHANOI</div>
+        </div>
+    </div>
+    <!-- icon fixed contact  end -->
+    <div class="scrolltop">
+        <button onclick="topFunction()" id="myBtn" title="Push to hand up "><i class="fas fa-arrow-up"></i></button>
+    </div>
+
+
+
+    <!-- CDN Javascript and Bootstrap---------------------------------------------------------- start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/travel.js"></script>
+    <!-- CDN Javascript and Bootstrap---------------------------------------------------------- end  -->
+</body>
+
+</html>

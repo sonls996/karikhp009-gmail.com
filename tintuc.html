@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức</title>
+    <script src="https://kit.fontawesome.com/f1bce2ab63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sass/travel.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sass/news.css">
+</head>
+
+<body>
+    <header>
+        <img src="./images/hotel_desktop.jpg" alt="bg-header">
+
+        <div class="hot-news">
+            <marquee behavior="" direction=""><i class="fab fa-keybase"></i> <a style="text-decoration: none;" href="#">Cập nhập tình hình dịch bệnh Covid 19 cho tất cả những khách hàng quan tâm đến dịch vụ của chúng tôi, <span style="color: red;text-decoration: underline;">bấm vào đây để biết thêm thông tin chi tiết</span> </a></marquee> 
+        </div>
+        <div class="select-tour">
+            <!--search-->
+            <div class="select-tour-search lt-12 pdb">
+                <div class="select-tour-search__input">
+                    <i style="color: black; opacity: 0.5; " class="fas fa-search"></i>
+                    <input style="flex-grow:1" type="text " placeholder="Tìm kiếm chuyến đi bạn muốn">
+                </div>
+            </div>
+
+            <!--calendar-->
+            <div class="calendar lt-12 pdb">
+                <div class="calendar-wrap">
+                    <i class="far fa-calendar-alt"></i>
+                    <div class="calendar-wrap-time">Tháng 3/2020</div>
+                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <div class="calendar-wrap-time">Tháng 3/2020</div>
+                </div>
+            </div>
+
+            <!--place-->
+
+            <div class="place lt-12 pdb">
+                <div class="place-wrap">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <select name="" id="">
+                        <option value="">Phong Nha Kẻ Bàng</option>
+                        <option value="">Vịnh Hạ Long</option>
+                        <option value="">Tam Cốc Bích Động</option>
+                        <option value="">Tây Ban Nha</option>
+                        <option value="">Phong Nha Kẻ Bàng</option>
+                        <option value="">Phong Nha Kẻ Bàng</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--button find travel-->
+            <div class="select-tour-button lt-12 pdb">
+                <div class="select-tour-button__text">Tìm kiếm</div>
+            </div>
+        </div>
+    </header>
+    <div class="navigation">
+        <div  id="navbar" class="nav">
+            <!--logo-->
+            <div class="nav__logowrap">
+                <a href=""><img src="./images/logo.png" alt="logo"></a>
+            </div>
+            <div onclick="openNav()" class="nav__tablet">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav__menu">
+                <li class="nav__menu-item"><a href="index.html">Trang chủ</a></li>
+                <li class="nav__menu-item"><a href="#">Giới thiệu </a></li>
+                <li class="nav__menu-item">
+                    <a href="tourdulich.html"> Tour du lịch</a>
+                    <div id="submenu" class="submenu-wrap">
+                        <!-- 1 column submenu-->
+                        <div class="submenu-wrap-column">
+                            <h1>Trong nước</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Hạ Long</a>
+                                <a href="#">Ninh Bình</a>
+                                <a href="#">Nghệ An</a>
+                                <a href="#">Đà Nẵng</a>
+                                <a href="#">Tam đảo</a>
+                                <a href="#">Quảng Ninh </a>
+                                <a href="#">Thanh Hóa</a>
+                            </div>
+                        </div>
+
+                        <div class="submenu-wrap-column">
+                            <h1>Ngoài Nước</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Tây Ban Nha</a>
+                                <a href="#">Ý</a>
+                                <a href="#">Pháp</a>
+                                <a href="#">Anh</a>
+                                <a href="#">Thái Lan</a>
+                                <a href="#">Hàn Quốc</a>
+                                <a href="#">Trung Quốc</a>
+                            </div>
+                        </div>
+
+                        <div class="submenu-wrap-column">
+                            <h1>Yêu thích</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Sapa</a>
+                                <a href="#">Vịnh Hạ Long</a>
+                                <a href="#">Đà Nẵng</a>
+                            </div>
+                        </div>
+
+                        <div class="submenu-wrap-column">
+                            <h1>Tự chọn</h1>
+                            <div class="submenu-wrap-column__item">
+                                <a href="#">Hang Sơn Đòng</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav__menu-item"><a href="tintuc.html">Tin tức</a></li>
+                <li class="nav__menu-item"><a href="#">Liên hệ</a></li>
+            </div>
+            <div class="nav__btnwrap">
+                <span title="Bạn có thể lựa chọn ngôn ngữ tại đây">Ngôn ngữ</span>
+                <!-- <select name="" id="">
+                    <option value="">Tiếng Việt</option>
+                    <option value="">English</option>
+                </select> -->
+                <a title="Thông tin tài khoản của bạn" id="myAccount" href="#">  <i class="fas fa-user-tie"></i> Tài khoản </a>
+                <div id="wrapMyAccount" class="myaccount  ">
+                    <a href="#"> <i style="margin-right: 10px;" class="fas fa-sign-in-alt"></i>Đăng nhập</a>
+                    <a href="#"><i style="margin-right: 10px;" class="fas fa-sign-out-alt"></i>Đăng ký</a>
+                    <a href="#"><i style="margin-right: 10px;" class="fas fa-bus"></i>Chuyến đi của bạn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mySidebar" class="nav__tablet-wrap">
+        <div class="nav__tablet-wrap-account">
+            <div onclick="closeNav()" class="closeNav" title="Bấm vào để đóng">x</div>
+            <div class="nav__tablet-wrap-account__icon">
+                <i class="fas fa-user"></i>
+            </div>
+            <div  id="clickme"  class="nav__tablet-wrap-account__info">Tài khoản  <i class="fas fa-caret-down"></i></div>
+        </div>
+        <div class="nav__tablet-wrap-login" id="mobile-wrapLogin">
+            <a href="#"> <i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
+            <a href="#"> <i class="fas fa-sign-out-alt"></i>Đăng ký</a>
+            <a href="#"> <i class="fas fa-plane"></i>Chuyến đi của bạn</a>
+            <a href="#"> <i class="fas fa-times-circle"></i>Thoát</a>
+        </div>
+        <div class="nav__tablet-wrap-menu">
+            <a href="#"> <i class="fas fa-home"></i>Trang chủ</a>
+            <a href="#"> <i class="fas fa-info-circle"></i>Giới thiệu</a>
+            <a href="#"> <i class="fas fa-bus"></i> Tour du lịch</a>
+            <a href="#"><i class="far fa-newspaper"></i>Tin tức</a>
+            <a href="#"><i class="fas fa-bullhorn"></i>Liên hệ</a>
+        </div>
+        <div class="nav__tablet-wrap-language">
+            <a href="#">Tiền tệ</a>
+            <a href="#">Ngôn ngữ
+                <select name="" id="">
+                    <option value="">Tiếng việt</option>
+                    <option value="">English</option>
+                    <option value="">Tiếng Nga</option>
+                    <option value="">Trung quốc</option>
+                    <option value="">Pháp</option>
+                </select>
+            </a>
+            <a href="#">Hỗ trợ <span><i class="fas fa-phone-volume"></i> 0398473263</span></a>
+            <a href="#">Tải ứng dụng</a>
+        </div>
+    </div>
+
+    <div class="title">
+        <div class="title-wrap"><i class="fas fa-newspaper"></i>Tin tức</div>
+    </div>
+    <!-- Tin tức-->
+    <div class="news">
+        <div class="news-wrap">
+            <div class="news-wrap-tintuc">
+                <!-- 1  tin tức-->
+                <div class="news-wrap-tintuc-item">
+                    <div class="news-wrap-tintuc-item__anh">
+                        <img src="./images/du-lich-phuc-quoc-ngam-Hoang-hon-Phu-Quoc-du-lich-viet.jpg" alt="tin tức ">
+                    </div>
+                    <div class="news-wrap-tintuc-item__info">
+                        <div class="news-wrap-tintuc-item__info-title">  <a href="">Đim tìm giấc mơ màu tìm</a></div>
+                        <div class="news-wrap-tintuc-item__info-text">Xe tôi trườn qua con đường nhỏ uốn lượn trong những ngôi làng miền Nam nước Pháp. Nắng chiều ngọt như mật và có chút gì đó thênh thang b...
+                        </div>
+                        <div class="post-time">
+                            <i class="far fa-clock"></i>  18:30:29 
+                        </div>
+                        <div class="post-people">
+                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-wrap-tintuc-item">
+                    <div class="news-wrap-tintuc-item__anh">
+                        <img src="./images/news1.jpg" alt="tin tức ">
+                    </div>
+                    <div class="news-wrap-tintuc-item__info">
+                        <div class="news-wrap-tintuc-item__info-title"><a href="">Khu vườn thượng lưu giữa lòng London</a></div>
+                        <div class="news-wrap-tintuc-item__info-text">Được ví như “Khu vườn thượng lưu” giữa lòng London, lễ hội hoa xuân Chelsea 2018 là sự kiện tầm cỡ thế giới làm thỏa lòng hàng triệu du ...</div>
+                        <div class="post-time">
+                            <i class="far fa-clock"></i>  18:30:29 
+                        </div>
+                        <div class="post-people">
+                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="news-wrap-tintuc-item">
+                    <div class="news-wrap-tintuc-item__anh">
+                        <img src="./images/news2.jpg" alt="tin tức ">
+                    </div>
+                    <div class="news-wrap-tintuc-item__info">
+                        <div class="news-wrap-tintuc-item__info-title"><a href="">Phải lòng mùa đông giữa Nam bán cầu</a></div>
+                        <div class="news-wrap-tintuc-item__info-text">Mùa hè, dường như ai cũng mơ về nắng vàng - biển xanh - cát trắng. Nhưng bạn có biết vẫn có nơi nào đó tuyết rơi trắng xóa và mọi người ...</div>
+                        <div class="post-time">
+                            <i class="far fa-clock"></i>  18:30:29 
+                        </div>
+                        <div class="post-people">
+                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news-wrap-tintuc-item">
+                    <div class="news-wrap-tintuc-item__anh">
+                        <img src="./images/news3.jpg" alt="tin tức ">
+                    </div>
+                    <div class="news-wrap-tintuc-item__info">
+                        <div class="news-wrap-tintuc-item__info-title"><a href="">Những kinh nghiệm quý giá khi đi  du lịch</a></div>
+                        <div class="news-wrap-tintuc-item__info-text">Thông thường thì những cá nhân đi du lịch thường đi theo tua hay có người dẫn đoàn, bài viết này dành cho các có nhu cầu du lịch tự túc ...</div>
+                        <div class="post-time">
+                            <i class="far fa-clock"></i>  18:30:29 
+                        </div>
+                        <div class="post-people">
+                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
+                        </div>
+                    </div>
+                </div>
+                <div class="news-wrap-tintuc-item">
+                    <div class="news-wrap-tintuc-item__anh">
+                        <img src="./images/du-lich-thai-lan-dolphin-show-du-lich-viet.jpg" alt="tin tức ">
+                    </div>
+                    <div class="news-wrap-tintuc-item__info">
+                        <div class="news-wrap-tintuc-item__info-title"><a href="">Những kinh nghiệm quý giá khi đi  du lịch</a></div>
+                        <div class="news-wrap-tintuc-item__info-text">Thông thường thì những cá nhân đi du lịch thường đi theo tua hay có người dẫn đoàn, bài viết này dành cho các có nhu cầu du lịch tự túc ...</div>
+                        <div class="post-time">
+                            <i class="far fa-clock"></i>  18:30:29 
+                        </div>
+                        <div class="post-people">
+                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </div>
+                  
+            </div>
+            <div class="news-wrap-menu">
+                <div class="news-wrap-menu-title">
+                    <div>Danh mục</div>
+                </div>
+                <div class="news-wrap-menu-list">
+                    <a href="">Trang chủ </a>
+                    <a href="">Giới thiệu<i class="fas fa-caret-down"></i></a>
+                    <a href="">Tour du lịch<i class="fas fa-caret-down"></i></a>
+                    <a href="">Tin tức</a>
+                    <a href="">Liên hệ</a>
+                </div>
+                <div class="news-wrap-menu-title mgt">
+                    <div>Chủ đề liên quan</div>
+                </div>
+                <div class="news-wrap-menu-list">
+                    <a class="bg-n" href="">Mua vé máy bay giá rẻ </a>
+                    <a class="bg-n" href="">Các địa điểm thu hút giới trẻ<i class="fas fa-caret-down"></i></a>
+                    <a class="bg-n" href="">Tour du lịch<i class="fas fa-caret-down"></i></a>
+                    <a class="bg-n" href="">Tháng 3 đi đâu bây giờ</a>
+                    <a class="bg-n" href="">Du lịch mua Corona</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="submit-form">
+        <h1>Đăng ký nhận tin</h1>
+        <span>Tổng hợp những chương trình tour theo tháng, du lịch vòng quanh thế giới với mức chi phí cực rẻ. Để nhận
+            ngay những thông tin chương trình tour hot, Sale. Quý khách hàng vui lòng nhập thông tin email tại đây !
+            Thanks</span>
+        <img src="./images/bg_brand.png" alt="">
+        <div class="submit-form-overlay"></div>
+        <div class="submit-form-search">
+            <form action="action.php">
+                <input type="text" placeholder=" Email của bạn  " required
+                    title="Vui lòng để lại email của bạn tại đây">
+                <button title="Bấm vào để đăng ký nhận thông tin">Đăng ký <i
+                        class="fas fa-long-arrow-alt-right"></i></button>
+            </form>
+        </div>
+    </div>
+    <!-- Liên hệ -->
+
+    <!-- main-contact-->
+    <div class="contact">
+
+        <div class="contact-row">
+            <!-- Column  thứ 1-->
+            <div class="contact-row-column">
+                <!--liên hệ-->
+                <div class="contact-row-lienhe">
+                    <div class="lienhe-wrap">
+                        <h1>LIÊN LẠC</h1>
+                        <div class="lienhe-wrap-item"><i class="fas fa-house-damage"></i><a href="#"> Phòng 2006 Tầng
+                                20</a></div>
+                        <div class="lienhe-wrap-item"><i class="fas fa-phone-volume"></i><a href="#"> 0398473263</a>
+                        </div>
+                        <div class="lienhe-wrap-item"><i class="far fa-envelope"></i><a
+                                href="#">Sonlhepuit@gmail.com</a></div>
+                        <div class="lienhe-wrap-item"><i class="far fa-clock"></i><a href="#">8h30am - 6hpm</a></div>
+                        <div class="lienhe-wrap-item"><i class="far fa-envelope"></i><a
+                                href="#">Sonlhepuit@gmail.com</a></div>
+                    </div>
+                </div>
+
+                <div class="contact-row-ketnoi">
+                    <!-- khối icon bên trên-->
+                    <div class="contact-row-ketnoi-row ">
+                        <h1>KẾT NỐI VỚI CHÚNG TÔI</h1>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-facebook-f"></i></a></div>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-skype"></i></a></div>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-skype"></i></a></div>
+                        <div class="contact-row-ketnoi-row__icon"><a href=""><i class="fab fa-skype"></i></a></div>
+
+                    </div>
+                    <div class="contact-row-ketnoi-row">
+                        <h1>CHẤP NHẬN THANH TOÁN</h1>
+                        <li>
+                            <a href=""><img src="./images/img_payment_1.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_2.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_3.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_4.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="./images/img_payment_5.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_6.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_7.png" alt=""></a>
+                            <a href=""><img src="./images/img_payment_8.png" alt=""></a>
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+            <!--Column thứ 2-->
+
+            <div class="contact-row-column">
+                <div class="contact-row-column-list">
+                    <!--column thứ nhất trong column to trong row lớn :)))-->
+                    <div class="contact-row-column-list-column">
+
+                        <div class="contact-row-column-list-column__title">TRONG NƯỚC</div>
+                        <div class="contact-row-column-list-column__item">
+                            <div><a href=""> - Hạ Long</a></div>
+                            <div><a href=""> - Ninh Bình</a></div>
+                            <div><a href=""> - Nghệ An</a></div>
+                            <div><a href=""> - Đà Nẵng</a></div>
+                            <div><a href=""> - Tam Đảo</a></div>
+                            <div><a href=""> - Quảng Ninh</a></div>
+                            <div><a href=""> - Thanh Hóa</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-row-column-list-column">
+
+                        <div class="contact-row-column-list-column__title">NGOÀI NƯỚC</div>
+                        <div class="contact-row-column-list-column__item">
+                            <div><a href=""> -  Tây Ban Nha</a></div>
+                            <div><a href=""> -  Ý</a></div>
+                            <div><a href=""> -  Pháp</a></div>
+                            <div><a href=""> -  Anh</a></div>
+                            <div><a href=""> -  Thái Lan</a></div>
+                            <div><a href=""> -  Hàn Quốc</a></div>
+                            <div><a href=""> -  Trung Quốc</a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-row-column-list-column">
+
+                        <div class="contact-row-column-list-column__title">THÔNG TIN</div>
+                        <div class="contact-row-column-list-column__item">
+                            <div><a href=""> -  Tin tức du lịch </a></div>
+                            <div><a href=""> -  Tạp chí du lịch</a></div>
+                            <div><a href=""> -  Cẩm nang du lịch </a></div>
+                            <div><a href=""> -  Kinh nghiệm  du lịch</a></div>
+                            <div><a href=""> -  Kinh nghiệm   xin Visa</a></div>
+                            <div><a href=""> -  Điều bạn cần biết</a></div>
+                            <div><a href=""> -  Liên hệ</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="copyright-wrap">
+            <span>© Bản quyền thuộc về I&E Corp ,</span>
+            <span>Cung cấp bởi <a href="" title="call me is Bap Cai Dep Trai ">Bắp Cải</a> </span>
+        </div>
+    </footer>
+
+    <!-- icon fixed contact start-->
+    <!-- <div class="wrap-contact">
+        <div class="wrap-contact-row" onclick="openContact1()">
+            <div title=" Số điện thoại của chúng tôi" style="background-color: green;" id="open-contact"
+                class="wrap-contact-row__icon"><i class="fas fa-phone"></i></div>
+            <div id="changeText1" class="wrap-contact-row__text">+84 : 98473263</div>
+        </div>
+        <div title="Kênh youtube của chúng tôi" class="wrap-contact-row" onclick="openContact2()">
+            <div style="background-color:red;" class="wrap-contact-row__icon"><i class="fab fa-youtube"></i></div>
+            <div id="changeText2" class="wrap-contact-row__text">Youtube : ĐẠI HỌC VĂN HÓA HÀ NỘI</div>
+        </div>
+        <div title="Facebook của chúng tôi" class="wrap-contact-row" onclick="openContact3()">
+            <div style="background-color: royalblue;" class="wrap-contact-row__icon"><i class="fab fa-facebook"></i>
+            </div>
+            <div id="changeText3" class="wrap-contact-row__text">ĐẠI HỌC VĂN HÓA HÀ NỘI</div>
+        </div>
+        <div title="Nhắn tin cho chúng tôi" class="wrap-contact-row" onclick="openContact4()">
+            <div style="background-color: orange;" class="wrap-contact-row__icon"><i
+                    class="fab fa-facebook-messenger"></i>
+            </div>
+            <div id="changeText4" class="wrap-contact-row__text">FB:MESSAGE//DAIHOCVANHOAHANOI</div>
+        </div>
+    </div> -->
+    <!-- icon fixed contact  end-->
+    <div class="scrolltop">
+        <button onclick="topFunction()" id="myBtn" title="Push to hand up "><i class="fas fa-arrow-up"></i></button>
+    </div>
+
+
+
+    <!-- CDN Javascript and Bootstrap---------------------------------------------------------- start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="js/travel.js"></script>
+    <!-- CDN Javascript and Bootstrap---------------------------------------------------------- end  -->
+</body>
+
+</html>

@@ -1,0 +1,379 @@
+$trang: #fff;
+$dodo: #c0392b;
+$cam: #d35400;
+$camnhat: #e67e22;
+$vang: #f1c40f;
+$vangcam: #f39c12;
+$tim: #8e44ad;
+$xanhdatroi: #2980b9;
+$xanhlacay: #27ae60;
+$greensea: #16a085;
+
+
+.nav{
+  background-color: rgba($color: #000000, $alpha: 1);
+}
+.cart {
+  .cart-wrap {
+    max-width: 1280px;
+    width: 100%;
+    // height: 1000px;
+    // border: 1px solid red;
+    margin: 0 auto;
+    
+    &-contain {
+      width: 90%;
+      margin: 0 auto;
+      padding: 40px 0;
+      // border: 1px solid black;
+      // height: 500px;
+      background-color: #f5f4ef;
+      &__title {
+        font-size: 18px;
+        font-size: 800;
+        font-family: Helvetica, sans-serif;
+        // text-align: left;
+        padding: 20px;
+        color: black;
+        // border: 1px solid red;
+      }
+      .cart-wrap-contain-main {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        flex-wrap: wrap;
+        // border: 1px solid  green;
+        .cart-wrap-contain-main__img {
+          width: 50%;
+          overflow: hidden;
+          &-bigpicture {
+            overflow: hidden;
+            margin-bottom: 10px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: 1s;
+            }
+          }
+          &-bigpicture:hover img {
+            transform: scale(1.4);
+          }
+          &-smallpicture {
+            img {
+              border: 1px solid $xanhdatroi;
+            }
+          }
+        }
+        .cart-wrap-contain-main__info {
+          width: 50%;
+        //   border: 1px solid orange;
+          padding: 20px;
+          div {
+            i {
+              margin-right: 10px;
+            }
+            span {
+              font-weight: 600;
+            }
+          }
+          &-price {
+            width: 100%;
+            padding: 20px;
+            .w-100 {
+              width: 100%;
+              display: flex;
+              margin-bottom: 15px;
+              .cl {
+                color: $xanhdatroi !important;
+              }
+              .w-25 {
+                margin: 0 auto;
+                width: 25%;
+                color: black;
+                // text-align: center;
+                input {
+                  height: 20px;
+                  width: 80%;
+                  border: none;
+                  padding-left: 10px;
+                  font-size: 12px;
+                }
+              }
+              .w-25::first-child {
+                text-align: left !important;
+              }
+            }
+            .w-100:first-child {
+              border-bottom: 3px solid #dddddd;
+            }
+          }
+          .total {
+            display: flex;
+            height: 40px;
+            background-color: $trang;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            span {
+              width: 70%;
+              text-align: center;
+            }
+            p {
+              width: 30%;
+              color: red;
+              text-align: center;
+            }
+          }
+          .pay-btn {
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            height: 40px;
+            justify-content: space-between;
+            &__time {
+              width: 45%;
+              div {
+                background-color: $trang;
+                padding: 10px ;
+                i{
+                    margin-right: 40px;
+                }
+              }
+            }
+            &__picked {
+                width: 45%;
+              div {
+                background-color: $xanhdatroi;
+                color: $trang;
+                padding: 10px;
+                i{
+                    margin-right: 40px;
+                }
+                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1024px){
+    .cart-wrap-contain{
+        width: 100% !important;
+        .cart-wrap-contain-main__img{
+            width: 100% !important;
+            margin-bottom: 40px;
+        }
+        .cart-wrap-contain-main__info{
+            width: 100% !important;
+        }
+    }
+}
+
+.title{
+  width: 100%;
+  background-color: #f5f5f5;
+  margin-top: -6px;
+  &-wrap{
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      height: 60px;
+      line-height: 60px;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      padding-left: 60px;
+      i{
+          margin-right: 10px;
+      }
+  }
+}
+.travel-info{
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  // border: 1px solid red;
+  // height: 1000px;
+  &-wrap{
+    padding: 20px;
+    margin: 20px auto;
+    border:1px solid rgba($color: #000000, $alpha: 0.23);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    // height: 960px;
+    .rte{
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      max-width: 70%;
+      // border: 1px solid orange;
+      // border-right: 1px solid rgba($color: #000000, $alpha: 0.23);
+      a{
+        padding: 10px 20px;
+        background-color: $xanhdatroi;
+        border-radius: 10px;
+        margin: 0 auto;
+        color: $trang;
+        outline: none;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+    .noibat{
+      // border: 1px solid red;
+      max-width:27% ;
+      width: 100%;
+      &__title{
+        font-size: 26px;
+        font-weight: 400;
+        h1{
+          padding: 10px 20px;
+          background-color: $xanhdatroi;
+          color: $trang;
+          font-size: 18px;
+          text-align: center;
+          font-family: Firasan;
+          text-transform: uppercase;
+        }
+      }
+      .noibat-content{
+        width: 100%;
+        border: 1px solid rgba($color: #000000, $alpha: 0.23);
+        // border-bottom: none;
+        &__row{
+          margin: 0 10px;
+          display: flex;
+          padding: 10px 20px;
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.13);
+          span{
+            font-size: 16px;
+            font-weight: 400;
+            margin-right: 10px;
+            font-family: Firasan;
+          }
+          p{
+            font-size: 14px;
+            // text-decoration: underline;
+            opacity: 0.8;
+          }
+        }
+        &__row:last-child{
+          border-bottom: none;
+        }
+      }
+      .mgt{
+        margin-top: 10px;
+      }
+      .mgr{
+        margin-right: 10px;
+      }
+      .hight{
+        font-size: 14x;
+        font-weight: 700;
+        padding: 10px;
+        background-color: #F3F3F3;
+        margin: 1px auto;
+        color: rgba($color: #000000, $alpha: 0.7);
+      }
+      .hight:hover{
+        color: $xanhdatroi;
+      }
+      .button-need{
+        padding: 10px 20px;
+        color: $trang;
+        text-align: center;
+        cursor: pointer;
+        margin: 5px auto;
+      }
+      .bg-red{
+        background-color: red;
+      }
+      .bg-xanh{
+        background-color: $xanhdatroi;
+      }
+    }
+  }
+  &-title{
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+#more {display: none;}
+.rating{
+  max-width: 1280px;
+  width: 100%;
+  margin: 40px auto;
+  padding:0px 5%;
+  .heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+  
+  .fa {
+    font-size: 25px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+  
+  /* Three column layout */
+  .side {
+    float: left;
+    width: 15%;
+    margin-top:10px;
+  }
+  
+  .middle {
+    margin-top:10px;
+    float: left;
+    width: 70%;
+  }
+  
+  /* Place text to the right */
+  .right {
+    text-align: right;
+  }
+  
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The bar container */
+  .bar-container {
+    /* width: 100%; */
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Individual bars */
+  .bar-5 {width: 60%; height: 18px; background-color: #4CAF50;}
+  .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+  .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+  .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+  .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+  
+  /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+  @media (max-width: 400px) {
+    .side, .middle {
+      width: 100%;
+    }
+    .right {
+      display: none;
+    }
+  }
+}
+

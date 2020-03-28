@@ -1,0 +1,165 @@
+$trang: #fff;
+$dodo: #c0392b;
+$cam: #d35400;
+$camnhat: #e67e22;
+$vang: #f1c40f;
+$vangcam: #f39c12;
+$tim: #8e44ad;
+$xanhdatroi: #2980b9;
+$xanhlacay: #27ae60;
+$greensea: #16a085;
+
+
+.title{
+    width: 100%;
+    background-color: #f5f5f5;
+    margin-top: -6px;
+    &-wrap{
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        i{
+            margin-right: 10px;
+        }
+    }
+}
+.news{
+    width: 100%;
+    .news-wrap{
+        display: flex;
+        max-width: 1280px;
+        width: 100%;
+        margin: 20px auto;
+        justify-content: space-between;
+        // flex-direction: column;
+        // border: 1px solid rgba($color: #000000, $alpha: 0.25) ;
+        // padding: 20px;
+        &-tintuc{
+            position: relative;
+            width: 70%;
+            // border: 1px solid red;
+            &-item{
+                // width: 100%;
+                margin: 40px 0 40px 0;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.25);
+                // padding: 25px;
+                display: flex;
+                height: 200px;
+                overflow: hidden;
+                &__anh{
+                    width: 33.333333%;
+                    object-fit: cover;
+                    // height: 100%;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &__info{
+                    padding-left: 20px;
+                    width: 66%;
+                    &-title{
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                        a{
+                            color: black;
+                            text-decoration: none;
+                        }
+                        a:hover{
+                            color: $xanhdatroi;
+                            text-decoration: underline;
+                        }
+                    }
+                    &-text{
+                        font-size: 16px;
+                        // text-overflow: ellipsis;
+                        // overflow: hidden;
+                        // white-space: nowrap;
+                    }
+                    .post-time{
+                        margin: 5px 0;
+                        i{
+                            margin-right: 10px;
+                            color: red;
+                        }
+                    }
+                    .post-people{
+                        margin: 5px 0;
+                        i{
+                            margin-right: 10px;
+                            color: red;
+                        }
+                    }
+                }
+            }
+
+            //đang làm dở
+            &-item:last-child{
+                border-bottom: none !important;
+            }
+            .pagination{
+                position: absolute;
+                bottom: -20px;
+                right: 0;
+                a{
+                    color: black;
+                    padding:  5px 15px;
+                }
+                a:hover{
+                    background-color: $xanhdatroi;
+                    color: $trang;
+                    outline: none;
+                    // border-bottom: 3px solid #27ae60;
+                }
+            }
+        }
+        &-menu{
+            width: 25%;
+            // border: 1px solid blue;
+            &-title{
+                div{
+                    font-size: 16px;
+                font-weight: 800;
+                text-transform: uppercase;
+                }
+            }
+            .mgt{
+                margin-top: 40px;
+            }
+            &-list{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                a{
+                padding: 10px 20px;
+                // border-bottom: 1px solid rgba($color: #000000, $alpha: 0.25);
+                color: $trang;
+                text-decoration: none;
+                background-color: #34495e;
+                margin: 5px 0;
+                i{
+                    float: right;
+                }
+                // margin: 0 20px;
+                }
+                a:hover{
+                    color: $xanhdatroi;
+                }
+            }
+            .bg-n{
+                background:none;
+                color: black;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.25);
+            }
+        }
+    }
+    
+}
