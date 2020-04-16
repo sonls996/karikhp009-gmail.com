@@ -1,0 +1,31 @@
+.contain-left {
+  background: none;
+}
+
+.contain-left .titlee {
+  border-bottom: 1px solid #ddd;
+}
+
+.contain-left .titlee h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.contain-left p {
+  line-height: 27px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.contain-left .anh {
+  width: 100%;
+}
+
+.contain-left .anh img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/*# sourceMappingURL=gioithieu.css.map */

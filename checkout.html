@@ -4,21 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tin tức</title>
+    <title>Xác nhận đặt chuyến đi</title>
     <script src="https://kit.fontawesome.com/f1bce2ab63.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="sass/travel.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="sass/news.css">
+    <link rel="stylesheet" href="./sass/checkout.css">
     <link rel="stylesheet" href="./sass/Bapcai.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
-        <img src="./images/hotel_desktop.jpg" alt="bg-header">
+        <img class="img-banner" src="./images/vin-slide2.jpg" alt="bg-header">
 
         <div class="hot-news">
-            <marquee behavior="" direction=""><i class="fab fa-keybase"></i> <a style="text-decoration: none;" href="#">Cập nhập tình hình dịch bệnh Covid 19 cho tất cả những khách hàng quan tâm đến dịch vụ của chúng tôi, <span style="color: red;text-decoration: underline;">bấm vào đây để biết thêm thông tin chi tiết</span> </a></marquee> 
+            <marquee behavior="" direction=""><i class="fab fa-keybase"></i> <a style="text-decoration: none;"
+                    href="#">Cập nhập tình hình dịch bệnh Covid 19 cho tất cả những khách hàng quan tâm đến dịch vụ của
+                    chúng tôi, <span style="color: red;text-decoration: underline;">bấm vào đây để biết thêm thông tin
+                        chi tiết</span> </a></marquee>
         </div>
         <div class="select-tour">
             <!--search-->
@@ -62,7 +69,7 @@
         </div>
     </header>
     <div class="navigation">
-        <div  id="navbar" class="nav">
+        <div id="navbar" class="nav">
             <!--logo-->
             <div class="nav__logowrap">
                 <a href=""><img src="./images/logo.png" alt="logo"></a>
@@ -121,7 +128,7 @@
                     </div>
                 </li>
                 <li class="nav__menu-item"><a href="tintuc.html">Tin tức</a></li>
-                <li class="nav__menu-item"><a href="#">Liên hệ</a></li>
+                <li class="nav__menu-item"><a href="contact.html">Liên hệ</a></li>
             </div>
             <div class="nav__btnwrap">
                 <span title="Bạn có thể lựa chọn ngôn ngữ tại đây">Ngôn ngữ</span>
@@ -129,7 +136,8 @@
                     <option value="">Tiếng Việt</option>
                     <option value="">English</option>
                 </select> -->
-                <a title="Thông tin tài khoản của bạn" id="myAccount" href="#">  <i class="fas fa-user-tie"></i> Tài khoản </a>
+                <a title="Thông tin tài khoản của bạn" id="myAccount" href="#"> <i class="fas fa-user-tie"></i> Tài
+                    khoản </a>
                 <div id="wrapMyAccount" class="myaccount  ">
                     <a href="#"> <i style="margin-right: 10px;" class="fas fa-sign-in-alt"></i>Đăng nhập</a>
                     <a href="#"><i style="margin-right: 10px;" class="fas fa-sign-out-alt"></i>Đăng ký</a>
@@ -144,7 +152,7 @@
             <div class="nav__tablet-wrap-account__icon">
                 <i class="fas fa-user"></i>
             </div>
-            <div  id="clickme"  class="nav__tablet-wrap-account__info">Tài khoản  <i class="fas fa-caret-down"></i></div>
+            <div id="clickme" class="nav__tablet-wrap-account__info">Tài khoản <i class="fas fa-caret-down"></i></div>
         </div>
         <div class="nav__tablet-wrap-login" id="mobile-wrapLogin">
             <a href="#"> <i class="fas fa-sign-in-alt"></i> Đăng nhập</a>
@@ -176,146 +184,190 @@
     </div>
 
     <div class="title">
-        <div class="title-wrap mgl40"><i class="fas fa-newspaper"></i>Tin tức</div>
+        <div class="title-wrap"><i class="fas fa-newspaper"></i>Hoàn tất thông tin đặt chuyến đi</div>
     </div>
 
 
+    <div class="pay">
+        <div class="pay-wrap df flww  w100 w-md90 w-sm90 w-xs90 mg0a">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Tin tức-->
-    <div class="news">
-        <div class="news-wrap w100 w-md90 w-sm90 w-xs90 flww  mg0a">
-            <div class="news-wrap-tintuc col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                <!-- 1  tin tức-->
-                <div class="news-wrap-tintuc-item">
-                    <div class="news-wrap-tintuc-item__anh">
-                        <img src="./images/du-lich-phuc-quoc-ngam-Hoang-hon-Phu-Quoc-du-lich-viet.jpg" alt="tin tức ">
+            <div class="contact col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="contact-wrap w100 w-md90 w-sm90 w-xs90">
+                    <div style="background-color: red; color: #fff;" class="contact-wrap-title bd1 pd10 talc">
+                        Hoàn thành mẫu dưới đây và chúng tôi sẽ liên lạc với bạn để thảo luận về nhu cầu của bạn.
                     </div>
-                    <div class="news-wrap-tintuc-item__info">
-                        <div class="news-wrap-tintuc-item__info-title">  <a href="">Đim tìm giấc mơ màu tìm</a></div>
-                        <div class="news-wrap-tintuc-item__info-text">Xe tôi trườn qua con đường nhỏ uốn lượn trong những ngôi làng miền Nam nước Pháp. Nắng chiều ngọt như mật và có chút gì đó thênh thang b...
-                        </div>
-                        <div class="post-time">
-                            <i class="far fa-clock"></i>  18:30:29 
-                        </div>
-                        <div class="post-people">
-                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
-                        </div>
+                    <div class="contact-wrap-form mgt50">
+                        <form action="#">
+                            <!-- chọn phương tiện di chuyển-->
+                            <div class="phuongtien">
+                                <h1>Vui lòng chọn phương tiện</h1>
+                                <div class="input">
+                                    <select name="#" id="#">
+                                        <option value="#">Máy bay</option>
+                                        <option value="#">Tàu lửa</option>
+                                        <option value="#">Ô tô</option>
+                                        <option value="#">Ô tô</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- thông tin cá nhân-->
+                            <div class="canhan df jtfspb ">
+                                <div class="item">
+                                    <h1>Tên đầu <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <input type="text" placeholder="Lê">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h1>Tên cuối <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <input type="text" placeholder="Sơn">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- email-->
+                            <div class="canhan df jtfspb ">
+                                <div class="item">
+                                    <h1>Địa chỉ email <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <input type="text" placeholder="example@examle.con">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h1>Số điện thoại <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <input type="text" placeholder="0398473263">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="canhan df jtfspb ">
+                                <div class="item">
+                                    <h1>Công ty của bạn <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <input type="text" placeholder="I&E Việt Nam">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h1>Website công ty của bạn <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <input type="text" placeholder="http://">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="phuongtien mgt30">
+                                <h1>Địa chỉ đường phố</h1>
+                                <div class="input">
+                                    <input type="text">
+                                </div>
+                            </div>
+
+                            <div class="canhan df jtfspb ">
+                                <div class="item">
+                                    <h1>Thành phố <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <input type="text" placeholder="I&E Việt Nam">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h1>Quốc gia <span class="clr">*</span></h1>
+                                    <div class="input">
+                                        <select name="#" id="#">
+                                            <option value="">Việt Nam</option>
+                                            <option value="">Đức</option>
+                                            <option value="">Nhật</option>
+                                            <option value="">Khác...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="phuongtien mgt30">
+                                <h1>Bạn quan tâm đến</h1>
+                                <div class="input">
+                                    <select name="#" id="#">
+                                        <option value="#">Vui lòng chọn điều bạn quan tâm</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="phuongtien mgt30">
+                                <h1>Chi tiết bổ sung</h1>
+                                <div class="mgt10"></div>
+                                <textarea style="width:100%" name="#" id="#" cols="30" rows="10"></textarea>
+                            </div>
                     </div>
+                    <div class="mgt30">
+                        <input style="font-size: 18px;" type="checkbox"> <span>Tôi đồng ý với chính sách và quyền riêng
+                            tư và cách website sử dụng dữ liệu của tôi</span>
+                    </div>
+                    <div class="butten mgt30 dfgiua">
+                        <!-- <p style="background: red; color: #fff;" class="pdt15 pdb15 pdl30 pdr30 bd1"><a href="#">Hoàn tất đặt chỗ ngay
+                            chuyến đi</a></p> -->
+                            <div class="container">
+                                <div class="row">
+                                    <a class="btn btn-primary" data-toggle="modal" href="#ignismyModal">Hoàn tất đặt chuyến đi</a>
+                                    <div class="modal fade" id="ignismyModal" role="dialog">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label=""><span>×</span></button>
+                                                 </div>
+                                                
+                                                <div class="modal-body">
+                                                   
+                                                    <div class="thank-you-pop">
+                                                        <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                                                        <h1>Xin cảm ơn!</h1>
+                                                        <p>Nội dung bạn vừa gửi chúng tôi đã nhận được và chúng tôi sẽ sớm liên hệ với bạn.</p>
+                                                        <h3 class="cupon-pop">Mã chuyến đi: <span>12345</span></h3>
+                                                        
+                                                     </div>
+                                                     
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
                 </div>
-
-                <div class="news-wrap-tintuc-item">
-                    <div class="news-wrap-tintuc-item__anh">
-                        <img src="./images/news1.jpg" alt="tin tức ">
-                    </div>
-                    <div class="news-wrap-tintuc-item__info">
-                        <div class="news-wrap-tintuc-item__info-title"><a href="">Khu vườn thượng lưu giữa lòng London</a></div>
-                        <div class="news-wrap-tintuc-item__info-text">Được ví như “Khu vườn thượng lưu” giữa lòng London, lễ hội hoa xuân Chelsea 2018 là sự kiện tầm cỡ thế giới làm thỏa lòng hàng triệu du ...</div>
-                        <div class="post-time">
-                            <i class="far fa-clock"></i>  18:30:29 
-                        </div>
-                        <div class="post-people">
-                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="news-wrap-tintuc-item">
-                    <div class="news-wrap-tintuc-item__anh">
-                        <img src="./images/news2.jpg" alt="tin tức ">
-                    </div>
-                    <div class="news-wrap-tintuc-item__info">
-                        <div class="news-wrap-tintuc-item__info-title"><a href="">Phải lòng mùa đông giữa Nam bán cầu</a></div>
-                        <div class="news-wrap-tintuc-item__info-text">Mùa hè, dường như ai cũng mơ về nắng vàng - biển xanh - cát trắng. Nhưng bạn có biết vẫn có nơi nào đó tuyết rơi trắng xóa và mọi người ...</div>
-                        <div class="post-time">
-                            <i class="far fa-clock"></i>  18:30:29 
-                        </div>
-                        <div class="post-people">
-                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="news-wrap-tintuc-item">
-                    <div class="news-wrap-tintuc-item__anh">
-                        <img src="./images/news3.jpg" alt="tin tức ">
-                    </div>
-                    <div class="news-wrap-tintuc-item__info">
-                        <div class="news-wrap-tintuc-item__info-title"><a href="">Những kinh nghiệm quý giá khi đi  du lịch</a></div>
-                        <div class="news-wrap-tintuc-item__info-text">Thông thường thì những cá nhân đi du lịch thường đi theo tua hay có người dẫn đoàn, bài viết này dành cho các có nhu cầu du lịch tự túc ...</div>
-                        <div class="post-time">
-                            <i class="far fa-clock"></i>  18:30:29 
-                        </div>
-                        <div class="post-people">
-                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
-                        </div>
-                    </div>
-                </div>
-                <div class="news-wrap-tintuc-item">
-                    <div class="news-wrap-tintuc-item__anh">
-                        <img src="./images/du-lich-thai-lan-dolphin-show-du-lich-viet.jpg" alt="tin tức ">
-                    </div>
-                    <div class="news-wrap-tintuc-item__info">
-                        <div class="news-wrap-tintuc-item__info-title"><a href="">Những kinh nghiệm quý giá khi đi  du lịch</a></div>
-                        <div class="news-wrap-tintuc-item__info-text">Thông thường thì những cá nhân đi du lịch thường đi theo tua hay có người dẫn đoàn, bài viết này dành cho các có nhu cầu du lịch tự túc ...</div>
-                        <div class="post-time">
-                            <i class="far fa-clock"></i>  18:30:29 
-                        </div>
-                        <div class="post-people">
-                            <i class="fas fa-user-secret"></i>Lê Hồng Sơn 
-                        </div>
-                    </div>
-                </div>
-
-                    <div class="pagination">
-                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                    </div>
-                  
             </div>
-            <div class="news-wrap-menu col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="news-wrap-menu-title">
-                    <div>Danh mục</div>
+            <div class=" detail-travel col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="contain bd1">
+                    <div class="anhchuyendi ">
+                        <img src="./images/thienvientruclam.jpg" alt="">
+                    </div>
+                    <div class="thongtin mgt30 pd20">
+                        <div><i class="far fa-calendar-alt mgr20"></i> Khởi hành : Ngày 26 tháng 03 năm 2020</div>
+                        <div><i class="far fa-user mgr20 mgt20"></i> Số người : 03 người lớn, 02 trẻ con</div>
+                        <div class="mgt30 clr">Hủy Miễn Phí trước ngày 20/03/2020 <i class="fas fa-exclamation-circle mgl10"></i></div>
+                    </div>
+                    <div class="price">
+                        <div class="df jtfspb"><p>Giá chuyến đi</p> <span class="clr">10.000.000đ</span></div>
+                        <div class="df jtfspb mgt20"><p>Thuế và phí</p> <span class="clr">1.000.000đ</span></div>
+                        <div class="df jtfspb mgt20"><p>Tổng cộng</p> <span class="clr">11.000.000đ</span></div>
+                        <div class="df jtfspb mgt20"><p>Phụ phí du lịch 10% do khách hàng thanh toán trực tiếp cho đơn vị cung cấp ngay sau khi tiến hành thanh toán chi phí</p> </div>
+                    </div>
+                    <div class="help">
+                        <p>Nếu vẫn còn gì thắc mắc vui lòng gọi cho chúng tôi theo hotline
+                            <span class="clr">0398473263</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="news-wrap-menu-list">
-                    <a href="">Trang chủ </a>
-                    <a href="">Giới thiệu<i class="fas fa-caret-down"></i></a>
-                    <a href="">Tour du lịch<i class="fas fa-caret-down"></i></a>
-                    <a href="">Tin tức</a>
-                    <a href="">Liên hệ</a>
-                </div>
-                <div class="news-wrap-menu-title mgt">
-                    <div>Chủ đề liên quan</div>
-                </div>
-                <div class="news-wrap-menu-list">
-                    <a class="bg-n" href="">Mua vé máy bay giá rẻ </a>
-                    <a class="bg-n" href="">Các địa điểm thu hút giới trẻ<i class="fas fa-caret-down"></i></a>
-                    <a class="bg-n" href="">Tour du lịch<i class="fas fa-caret-down"></i></a>
-                    <a class="bg-n" href="">Tháng 3 đi đâu bây giờ</a>
-                    <a class="bg-n" href="">Du lịch mua Corona</a>
-                </div>
+                
             </div>
         </div>
-    </div>
+        
 
+
+
+    </div>
+    </div>
 
 
 
@@ -412,13 +464,13 @@
 
                         <div class="contact-row-column-list-column__title">NGOÀI NƯỚC</div>
                         <div class="contact-row-column-list-column__item">
-                            <div><a href=""> -  Tây Ban Nha</a></div>
-                            <div><a href=""> -  Ý</a></div>
-                            <div><a href=""> -  Pháp</a></div>
-                            <div><a href=""> -  Anh</a></div>
-                            <div><a href=""> -  Thái Lan</a></div>
-                            <div><a href=""> -  Hàn Quốc</a></div>
-                            <div><a href=""> -  Trung Quốc</a></div>
+                            <div><a href=""> - Tây Ban Nha</a></div>
+                            <div><a href=""> - Ý</a></div>
+                            <div><a href=""> - Pháp</a></div>
+                            <div><a href=""> - Anh</a></div>
+                            <div><a href=""> - Thái Lan</a></div>
+                            <div><a href=""> - Hàn Quốc</a></div>
+                            <div><a href=""> - Trung Quốc</a></div>
                         </div>
 
                     </div>
@@ -427,13 +479,13 @@
 
                         <div class="contact-row-column-list-column__title">THÔNG TIN</div>
                         <div class="contact-row-column-list-column__item">
-                            <div><a href=""> -  Tin tức du lịch </a></div>
-                            <div><a href=""> -  Tạp chí du lịch</a></div>
-                            <div><a href=""> -  Cẩm nang du lịch </a></div>
-                            <div><a href=""> -  Kinh nghiệm  du lịch</a></div>
-                            <div><a href=""> -  Kinh nghiệm   xin Visa</a></div>
-                            <div><a href=""> -  Điều bạn cần biết</a></div>
-                            <div><a href=""> -  Liên hệ</a></div>
+                            <div><a href=""> - Tin tức du lịch </a></div>
+                            <div><a href=""> - Tạp chí du lịch</a></div>
+                            <div><a href=""> - Cẩm nang du lịch </a></div>
+                            <div><a href=""> - Kinh nghiệm du lịch</a></div>
+                            <div><a href=""> - Kinh nghiệm xin Visa</a></div>
+                            <div><a href=""> - Điều bạn cần biết</a></div>
+                            <div><a href=""> - Liên hệ</a></div>
                         </div>
 
                     </div>
@@ -450,30 +502,6 @@
         </div>
     </footer>
 
-    <!-- icon fixed contact start-->
-    <!-- <div class="wrap-contact">
-        <div class="wrap-contact-row" onclick="openContact1()">
-            <div title=" Số điện thoại của chúng tôi" style="background-color: green;" id="open-contact"
-                class="wrap-contact-row__icon"><i class="fas fa-phone"></i></div>
-            <div id="changeText1" class="wrap-contact-row__text">+84 : 98473263</div>
-        </div>
-        <div title="Kênh youtube của chúng tôi" class="wrap-contact-row" onclick="openContact2()">
-            <div style="background-color:red;" class="wrap-contact-row__icon"><i class="fab fa-youtube"></i></div>
-            <div id="changeText2" class="wrap-contact-row__text">Youtube : ĐẠI HỌC VĂN HÓA HÀ NỘI</div>
-        </div>
-        <div title="Facebook của chúng tôi" class="wrap-contact-row" onclick="openContact3()">
-            <div style="background-color: royalblue;" class="wrap-contact-row__icon"><i class="fab fa-facebook"></i>
-            </div>
-            <div id="changeText3" class="wrap-contact-row__text">ĐẠI HỌC VĂN HÓA HÀ NỘI</div>
-        </div>
-        <div title="Nhắn tin cho chúng tôi" class="wrap-contact-row" onclick="openContact4()">
-            <div style="background-color: orange;" class="wrap-contact-row__icon"><i
-                    class="fab fa-facebook-messenger"></i>
-            </div>
-            <div id="changeText4" class="wrap-contact-row__text">FB:MESSAGE//DAIHOCVANHOAHANOI</div>
-        </div>
-    </div> -->
-    <!-- icon fixed contact  end-->
     <div class="scrolltop">
         <button onclick="topFunction()" id="myBtn" title="Push to hand up "><i class="fas fa-arrow-up"></i></button>
     </div>

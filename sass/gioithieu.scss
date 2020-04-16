@@ -1,0 +1,39 @@
+$trang: #fff;
+$dodo: #c0392b;
+$cam: #d35400;
+$camnhat: #e67e22;
+$vang: #f1c40f;
+$vangcam: #f39c12;
+$tim: #8e44ad;
+$xanhdatroi: #2980b9;
+$xanhlacay: #27ae60;
+$greensea: #16a085;
+
+.contain-left{
+    background: none;
+    .titlee{
+        border-bottom: 1px solid #ddd;
+        h1{
+            font-size: 26px;
+            text-transform: uppercase;
+
+            font-weight: 700;
+        }
+    }
+    p{
+        line-height: 27px;
+        font-size: 18px;
+        margin-top: 20px;
+        li{
+            
+        }
+    }
+    .anh{
+        width: 100%;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

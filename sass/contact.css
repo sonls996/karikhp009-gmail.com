@@ -1,0 +1,96 @@
+.title-wrap {
+  margin-bottom: 0 !important;
+  padding-left: 10%;
+  text-align: center;
+}
+
+.contact {
+  padding: 0 0 60px 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.contact .contact-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact .contact-wrap-title {
+  font-size: 21px;
+  color: #707070;
+  font-weight: 400;
+  line-height: 25px;
+  padding: 30px 0;
+}
+
+.contact .contact-wrap-form form .phuongtien h1 {
+  line-height: 20px;
+  color: #333333;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.contact .contact-wrap-form form .phuongtien .input {
+  margin-top: 10px;
+  height: 40px;
+  width: 100%;
+}
+
+.contact .contact-wrap-form form .phuongtien .input select {
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.contact .contact-wrap-form form .phuongtien .input input {
+  height: 40px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.contact .contact-wrap-form form .canhan {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact .contact-wrap-form form .canhan .item {
+  width: 45%;
+  margin-top: 20px;
+}
+
+.contact .contact-wrap-form form .canhan .item h1 {
+  line-height: 20px;
+  color: #333333;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.contact .contact-wrap-form form .canhan .item input {
+  margin-top: 10px;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.contact .contact-wrap-form form .canhan .item select {
+  margin-top: 10px;
+  height: 40px;
+  outline: none;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.contact .contact-wrap-form form .butten {
+  width: 60px;
+  height: 40px;
+  background-color: #c0392b;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .item {
+    width: 100% !important;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

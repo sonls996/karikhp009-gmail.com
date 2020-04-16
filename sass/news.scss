@@ -24,6 +24,7 @@ $greensea: #16a085;
         font-weight: 600;
         text-transform: uppercase;
         margin-bottom: 30px;
+        text-align: center;
         i{
             margin-right: 10px;
         }
@@ -37,9 +38,7 @@ $greensea: #16a085;
         width: 100%;
         margin: 20px auto;
         justify-content: space-between;
-        // flex-direction: column;
-        // border: 1px solid rgba($color: #000000, $alpha: 0.25) ;
-        // padding: 20px;
+      
         &-tintuc{
             position: relative;
             width: 70%;

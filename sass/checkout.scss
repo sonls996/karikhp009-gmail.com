@@ -1,0 +1,195 @@
+$trang: #fff;
+$dodo: #c0392b;
+$cam: #d35400;
+$camnhat: #e67e22;
+$vang: #f1c40f;
+$vangcam: #f39c12;
+$tim: #8e44ad;
+$xanhdatroi: #2980b9;
+$xanhlacay: #27ae60;
+$greensea: #16a085;
+
+
+.title-wrap {
+  margin-bottom: 0 !important;
+//   padding-left: 10%;
+  text-align: center;
+}
+
+.pay {
+  width: 100%;
+  padding: 60px 0;
+  .pay-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    .contact {
+      padding: 60px 0;
+      width: 75%;
+      background-color: #fff;
+      .contact-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        &-title {
+          font-size: 21px;
+          color: #707070;
+          font-weight: 400;
+          line-height: 25px;
+          padding: 30px 0;
+        }
+        &-form {
+          form {
+            .phuongtien {
+              h1 {
+                line-height: 20px;
+                color: #333333;
+                font-weight: 700;
+                font-size: 18px;
+              }
+              .input {
+                margin-top: 10px;
+                height: 40px;
+                width: 100%;
+                select {
+                  height: 40px;
+                  //   border: none;
+                  //   outline: none;
+                  width: 100%;
+                  padding-left: 10px;
+                }
+                input {
+                  height: 40px;
+                  border: none;
+                  outline: none;
+                  width: 100%;
+                }
+              }
+            }
+            .canhan {
+              flex-wrap: wrap;
+              .item {
+                width: 45%;
+                margin-top: 20px;
+                h1 {
+                  line-height: 20px;
+                  color: #333333;
+                  font-weight: 700;
+                  font-size: 18px;
+                }
+                input {
+                  margin-top: 10px;
+                  height: 40px;
+                  width: 100%;
+                  padding-left: 10px;
+                }
+                select {
+                  margin-top: 10px;
+                  height: 40px;
+                  //   border: none;
+                  outline: none;
+                  width: 100%;
+                  padding-left: 10px;
+                }
+              }
+            }
+            .butten {
+              width: 60px;
+              height: 40px;
+              background-color: $dodo;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .detail-travel{
+        .contain{
+            margin: 60px  10px 0 10px;
+            // padding: 60px 0;
+
+            .thongtin{
+                border-bottom: 1px solid #ddd;
+            }
+            .price{
+                padding: 20px;
+                border-bottom: 1px solid #ddd;
+            }
+            .help{
+                padding: 20px;
+            }
+        }
+    }
+  }
+}
+
+.butten{
+    p{
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+  .item {
+    width: 100% !important;
+  }
+}
+
+
+/*--thank you pop starts here--*/
+.thank-you-pop{
+	width:100%;
+ 	padding:20px;
+	text-align:center;
+}
+.thank-you-pop img{
+	width:76px;
+	height:auto;
+	margin:0 auto;
+	display:block;
+	margin-bottom:25px;
+}
+
+.thank-you-pop h1{
+	font-size: 42px;
+    margin-bottom: 25px;
+	color:#5C5C5C;
+}
+.thank-you-pop p{
+	font-size: 20px;
+    margin-bottom: 27px;
+ 	color:#5C5C5C;
+}
+.thank-you-pop h3.cupon-pop{
+	font-size: 25px;
+    margin-bottom: 40px;
+	color:#222;
+	display:inline-block;
+	text-align:center;
+	padding:10px 20px;
+	border:2px dashed #222;
+	clear:both;
+	font-weight:normal;
+}
+.thank-you-pop h3.cupon-pop span{
+	color:#03A9F4;
+}
+.thank-you-pop a{
+	display: inline-block;
+    margin: 0 auto;
+    padding: 9px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #8BC34A;
+    border-radius: 17px;
+}
+.thank-you-pop a i{
+	margin-right:5px;
+	color:#fff;
+}
+#ignismyModal .modal-header{
+    border:0px;
+}
+/*--thank you pop ends here--*/

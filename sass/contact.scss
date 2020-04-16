@@ -1,0 +1,102 @@
+$trang: #fff;
+$dodo: #c0392b;
+$cam: #d35400;
+$camnhat: #e67e22;
+$vang: #f1c40f;
+$vangcam: #f39c12;
+$tim: #8e44ad;
+$xanhdatroi: #2980b9;
+$xanhlacay: #27ae60;
+$greensea: #16a085;
+
+.title-wrap {
+  margin-bottom: 0 !important;
+  padding-left: 10%;
+  text-align: center;
+}
+.contact {
+  padding: 0 0 60px 0;
+  width: 100%;
+  background-color: #fff;
+  .contact-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    &-title {
+      font-size: 21px;
+      color: #707070;
+      font-weight: 400;
+      line-height: 25px;
+      padding: 30px 0;
+    }
+    &-form {
+      form {
+        .phuongtien {
+          h1 {
+            line-height: 20px;
+            color: #333333;
+            font-weight: 700;
+            font-size: 18px;
+          }
+          .input {
+            margin-top: 10px;
+            height: 40px;
+            width: 100%;
+            select {
+              height: 40px;
+            //   border: none;
+            //   outline: none;
+              width: 100%;
+              padding-left: 10px;
+            }
+            input {
+              height: 40px;
+              border: none;
+              outline: none;
+              width: 100%;
+            }
+          }
+        }
+        .canhan {
+            flex-wrap: wrap;
+          .item {
+            width: 45%;
+            margin-top: 20px;
+            h1 {
+              line-height: 20px;
+              color: #333333;
+              font-weight: 700;
+              font-size: 18px;
+            }
+            input {
+              margin-top: 10px;
+              height: 40px;
+              width: 100%;
+              padding-left: 10px;
+            }
+            select {
+              margin-top: 10px;
+              height: 40px;
+            //   border: none;
+              outline: none;
+              width: 100%;
+              padding-left: 10px;
+            }
+          }
+        }
+        .butten {
+          width: 60px;
+          height: 40px;
+          background-color: $dodo;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:576px){
+    .item{
+        width: 100% !important;
+    }
+}
